@@ -1,23 +1,21 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Barry McGee - Front-end Developer - Curriculum Vitae / Resumé</title>
-        <meta name="description" content="">
+        <meta name="description" content="Curriculum Vitae of Barry McGee - a front-end web developer with over ten years experience of building websites used by millions of people. Based in London. ">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Place favicon.ico in the root directory -->
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-
         <!-- /// CSS Stylesheets ////////  -->
 				<link type="text/css" href="style.css" rel="stylesheet" media="all" />
+
 				<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css' />
 
-        <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
 <body>
 <!--[if lt IE 9]>
@@ -31,7 +29,8 @@
 
 
 			<div class="row">
-				<div class="span6">
+				<header>
+					<div class="span6">
 
 					<h1 class="logo">
 						Barry McGee
@@ -39,7 +38,7 @@
 					</h1>
 
 				</div><!-- end .span6 -->
-				<div class="span3">
+					<div class="span3">
 
 					<address class="address-info hide-on-phone">
 						7a Loveridge Rd
@@ -48,15 +47,16 @@
 					</address>
 
 				</div><!-- end .span3 -->
-				<div class="span3">
+					<div class="span3">
 
 					<ul class="contact-info hide-on-phone fixed">
 						<li>E-mail: <a href="mailto:hello@barrymcgee.co.uk">hello@barrymcgee.co.uk</a></li>
 						<li>Website: <a href="http://www.barrymcgee.co.uk">barrymcgee.co.uk</a></li>
-						<li>Phone: <strong>+44 (0) 7742 343 792</strong></li>
+						<li>Phone: +44 (0) 7742 343 792</li>
 					</ul>
 
 				</div><!-- end .span3 -->
+				</header>
 			</div><!-- end .row -->
 
 
@@ -66,9 +66,45 @@
 			<div class="row">
 				<div class="span12">
 
-					<h2 class="cv-profile">I'm a front-end web developer with over ten years experience of building websites used by millions of people. I care about making a web that looks good, loads fast &amp; works everywhere for everyone. </h2>
+					<h2 class="cv-profile">I'm a front-end web developer with over ten years experience of building websites used by millions of people. I care about crafting a web that looks good, loads fast &amp; works everywhere for everyone. </h2>
 
 				</div><!-- end .span12 -->
+			</div><!-- end .row -->
+
+
+			<!-- // Skillset //////////////////////////////////////////////////////////////////////////////// -->
+
+			<div class="row">
+				<div class="span3">&nbsp;</div>
+				<div class="span9">
+
+					<h3 class="cv-section-title">Skillset</h3>
+
+					<p>Over the past few years I've been working mainly with these tools, technologies and methodologies. I'd be more than happy to discuss my experience with any of these in person.</p>
+
+				</div><!-- end .span9 -->
+			</div><!-- end .row -->
+
+						<!-- cv item -->
+			<div class="row cv-item">
+				<div class="span3 cv-item-description">
+
+					<h6>Technologies</h6>
+
+				</div><!-- end .span3 -->
+				<div class="span9 cv-item-details">
+
+					<ul class="inline-list">
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>SASS / LESS</li>
+						<li>jQuery</li>
+						<li>Javascript</li>
+						<li>HTML</li>
+						<li>HTML</li>
+					</ul>
+
+				</div><!-- end .span9 -->
 			</div><!-- end .row -->
 
 
@@ -118,7 +154,7 @@ I was one of two contracting front enders who helped build a scalable, modular, 
 			<div class="row cv-item">
 				<div class="span3 cv-item-description">
 
-					<h6>the OTHER media</h6>
+					<h6>Other Media</h6>
 					<p><span class="mute">June 2013 - July 2013</span></p>
 
 				</div><!-- end .span3 -->
@@ -468,23 +504,6 @@ I was one of two contracting front enders who helped build a scalable, modular, 
 						<li><i class="icon icon-bullhorn"></i> +44 (0) 7742 343 792</li>
 					</ul>
 
-					<form id="contact-form" class="fixed" action="javascript:void(0);">
-						<fieldset>
-							<p id="formstatus"></p>
-							<div class="row">
-								<div class="span4">
-									<p><input class="text" type="text" id="name" name="name" value="Your name" onfocus="if(this.value=='Your name')this.value='';" onblur="if(this.value=='')this.value='Your name';" /></p>
-									<p><input class="text" type="text" id="email" name="email" value="Your e-mail address" onfocus="if(this.value=='Your e-mail address')this.value='';" onblur="if(this.value=='')this.value='Your e-mail address';" /></p>
-									<p class="last"><input class="text" type="text" id="subject" name="subject" value="Subject" onfocus="if(this.value=='Subject')this.value='';" onblur="if(this.value=='')this.value='Subject';"  /></p>
-								</div><!-- end .span4 -->
-								<div class="span5">
-									<p><textarea id="message" name="message" rows="3" cols="25"></textarea></p>
-									<p class="last text-right"><input type="submit" name="submit" class="btn btn-white" value="Send!" /></p>
-								</div><!-- end .span5 -->
-							</div><!-- end .row -->
-						</fieldset>
-					</form><!-- end #contact-form -->
-
 				</div><!-- end .span9 -->
 			</div><!-- end .row -->
 
@@ -495,23 +514,22 @@ I was one of two contracting front enders who helped build a scalable, modular, 
 	</div><!-- end .wrap -->
 
 		<!-- /// jQuery ////////  -->
-	<script type="text/javascript" src="_layout/js/jquery-1.9.1.min.js" ></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 	<!-- /// Imagebox ////////  -->
+<!--
 	<script type="text/javascript" src="_layout/js/imagebox/jquery.imagebox.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="_layout/js/imagebox/imagebox.css" />
+-->
 
 	<!-- /// FlexSlider ////////  -->
+<!--
 	<script type="text/javascript" src="_layout/js/flexslider/jquery.flexslider.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="_layout/js/flexslider/flexslider.css" />
-
-	<!-- /// Validity ////////  -->
-	<script type="text/javascript" src="_layout/js/validity/jquery.validity.js"></script>
-	<link rel="stylesheet" type="text/css" href="_layout/js/validity/css.validity.css" />
+-->
 
 	<!-- /// Custom JS ////////  -->
-	<script type="text/javascript" src="_layout/js/scripts.js"></script>
-	<script type="text/javascript" src="_layout/js/plugins.js"></script>
+	<script type="text/javascript" src="_dest/js/script.min.js"></script>
 
 </body>
 </html>
