@@ -35,7 +35,7 @@ module.exports = function(grunt) {
         sass: {
             dist: {
                 options: {
-                    style: 'expanded'
+                    style: 'compressed'
                 },
                 files: {
                     '_dest/css/style.css': '_src/css/style.scss'
@@ -64,7 +64,7 @@ module.exports = function(grunt) {
             },
             css: {
               files: ['_src/css/*.scss'],
-              tasks: ['sass'],
+              tasks: ['sass', 'uncss'],
               options: {
                   spawn: false,
               }
@@ -83,6 +83,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-uncss');
 
     // 8. Register all the tasks.
-    grunt.registerTask('default', ['concat', 'uglify', 'sass', 'watch', 'shell', 'grunt-uncss']);
+    grunt.registerTask('default', ['concat', 'uglify', 'sass', 'watch', 'shell', 'uncss']);
 
 };
