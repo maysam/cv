@@ -12,10 +12,10 @@
 	margin: 0;
 	padding: 0;
 	list-style: none;
-} 
+}
 
 /* FlexSlider Necessary Styles
-*********************************/ 
+*********************************/
 .flexslider {
 	margin: 0;
 	padding: 0;
@@ -24,7 +24,7 @@
 .flexslider .slides > li {
 	display: none;
 	-webkit-backface-visibility: hidden;
-} 
+}
 
 /* Hide the slides before the JS is loaded. Avoids image jumping */
 .flexslider .slides img {
@@ -152,7 +152,7 @@ html[xmlns] .slides {
 	background: #e2e2e2;
 	cursor: pointer;
 	text-indent: -9999px;
-	
+
 }
 
 .flex-control-paging li:first-child a{
@@ -175,7 +175,7 @@ html[xmlns] .slides {
 
 
 .flex-control-paging li a.flex-active {
-	background: #359CBD;
+	background: #0071bc;
 }
 
 .flex-control-paging li a:hover{
@@ -183,7 +183,7 @@ html[xmlns] .slides {
 }
 
 .flex-control-paging li a.flex-active:hover{
-	background:  #359CBD;
+	background:  #0071bc;
 }
 
 .flex-control-paging li a.flex-active {
@@ -191,7 +191,7 @@ html[xmlns] .slides {
 }
 
 .flexslider img {
-	
+
 }
 
 @media only screen and (max-width: 959px) {
@@ -201,8 +201,8 @@ html[xmlns] .slides {
 }
 
 @media only screen and (max-width: 767px) {
- 
+
  	.flex-direction-nav{ display:none; }
 	.flex-control-nav { bottom:-20px; }
- 
+
 }

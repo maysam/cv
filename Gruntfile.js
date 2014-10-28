@@ -51,6 +51,7 @@ module.exports = function(grunt) {
 				  }
 				},
 				// Prettify
+/*
 				prettify: {
 				   options: {
 				    indent: 2,
@@ -67,6 +68,7 @@ module.exports = function(grunt) {
 					    dest: ''
 					  },
 				},
+*/
         // 6. Watch for new files
         watch: {
            options: {
@@ -101,6 +103,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-prettify');
 
     // 8. Register all the tasks.
-    grunt.registerTask('default', ['concat', 'uglify', 'prettify', 'sass', 'imagemin', 'watch', 'shell', 'uncss']);
+    grunt.registerTask('default', ['concat', 'uglify', 'sass', 'imagemin', 'watch', 'shell', 'uncss']);
 
 };
