@@ -1,11 +1,11 @@
 module.exports = function(grunt) {
 
-    // 1. All configuration goes here
+    // All configuration goes here
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
         concat: {
-        // 2. Configuration for concatinating files goes here.
+        // Configuration for concatinating files goes here.
           dist: {
               src: [
                   '_src/js/*.js', // All JS in the libs folder
@@ -14,14 +14,14 @@ module.exports = function(grunt) {
           }
         },
         uglify: {
-        // 3. Minifiy JS
+        // Minifiy JS
             build: {
                 src: '_dest/js/script.js',
                 dest: '_dest/js/script.min.js'
             }
         },
         imagemin: {
-        // 4. Compress images
+        // Compress images
             dynamic: {
                 files: [{
                     expand: true,
@@ -31,7 +31,7 @@ module.exports = function(grunt) {
                 }]
             }
         },
-        // 5. Compile SASS
+        // Compile SASS
         sass: {
             dist: {
                 options: {
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
                 }
 	          }
 	      },
-	      // 7. Remove redundant CSS
+	      // Remove redundant CSS
 	      uncss: {
 				  dist: {
 				    files: {
@@ -50,8 +50,7 @@ module.exports = function(grunt) {
 				    }
 				  }
 				},
-				// Prettify
-/*
+				// Prettify HTML files
 				prettify: {
 				   options: {
 				    indent: 2,
@@ -68,8 +67,25 @@ module.exports = function(grunt) {
 					    dest: ''
 					  },
 				},
-*/
-        // 6. Watch for new files
+				// Tidy up SASS files
+			  prettysass: {
+			    options: {
+			      alphabetize: true
+			    },
+			    app: {
+			      src: ['_src/css/**/*.scss']
+			    },
+			  },
+			  // Auto-prefix unsupported rules
+		    autoprefixer: {
+			    multiple_files: {
+			      expand: true,
+			      flatten: true,
+			      src: '_src/css/*.css', // -> src/css/file1.css, src/css/file2.css
+			      dest: '_dest/css/' // -> dest/css/file1.css, dest/css/file2.css
+			    }
+				},
+        // Watch for new files
         watch: {
            options: {
                 livereload: true
@@ -101,6 +117,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-uncss');
     grunt.loadNpmTasks('grunt-prettify');
+    grunt.loadNpmTasks('grunt-prettysass');
+    grunt.loadNpmTasks('grunt-autoprefixer');
 
     // 8. Register all the tasks.
     grunt.registerTask('default', ['concat', 'uglify', 'sass', 'imagemin', 'watch', 'shell', 'uncss']);

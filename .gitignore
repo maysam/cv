@@ -7,3 +7,7 @@ layout.scssc
 base.scssc
 node_modules/*
 _src/.DS_Store
+index.html
+node_modules/grunt-contrib-watch/node_modules/tiny-lr-fork/node_modules/qs/test/browser/mocha.css
+node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore/index.html
+node_modules/grunt/node_modules/underscore.string/test/test_underscore/vendor/qunit.css

@@ -322,7 +322,7 @@ img {
   padding: 80px 80px 60px 80px;
   margin: 80px auto;
   background-color: #fff;
-  -webkit-box-shadow: 2px 2px 1px #606060;
+  box-shadow: 2px 2px 1px #606060;
   box-shadow: 2px 2px 1px #606060;
 }
 
@@ -399,7 +399,7 @@ img {
 }
 
 .cv-item-details h4 {
-  line-height: 22px;
+  line-height: 36px;
   margin-bottom: 24px;
   font-size: 30px;
 }
@@ -485,7 +485,7 @@ img {
     width: auto;
     padding: 60px 0;
     margin: 40px auto;
-    -webkit-box-shadow: 2px 2px 1px #606060;
+    box-shadow: 2px 2px 1px #606060;
     box-shadow: 2px 2px 1px #606060;
   }
 
@@ -508,12 +508,12 @@ img {
     width: auto;
     padding: 60px 0;
     margin: 25px auto;
-    -webkit-box-shadow: 0 0 4px #606060;
+    box-shadow: 0 0 4px #606060;
     box-shadow: 0 0 4px #606060;
   }
 
   .wrap+.wrap {
-    -webkit-box-shadow: 0 4px 4px -2px #606060;
+    box-shadow: 0 4px 4px -2px #606060;
     box-shadow: 0 4px 4px -2px #606060;
     margin-top: -180px;
   }
@@ -581,7 +581,7 @@ img {
 
   .wrap {
     padding: 40px 80px;
-    -webkit-box-shadow: none;
+    box-shadow: none;
     box-shadow: none;
   }
 
