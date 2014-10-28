@@ -25,9 +25,9 @@ module.exports = function(grunt) {
             dynamic: {
                 files: [{
                     expand: true,
-                    cwd: 'img/',
+                    cwd: '_src/img',
                     src: ['**/*.{png,jpg,gif}'],
-                    dest: 'images_final/'
+                    dest: 'img/'
                 }]
             }
         },
@@ -83,6 +83,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-uncss');
 
     // 8. Register all the tasks.
-    grunt.registerTask('default', ['concat', 'uglify', 'sass', 'watch', 'shell', 'uncss']);
+    grunt.registerTask('default', ['concat', 'uglify', 'sass', 'imagemin', 'watch', 'shell', 'uncss']);
 
 };
