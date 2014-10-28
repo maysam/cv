@@ -40,15 +40,32 @@ module.exports = function(grunt) {
                 files: {
                     '_dest/css/style.css': '_src/css/style.scss'
                 }
-            }
-        },
-        // 7. Remove redundant CSS
-        uncss: {
+	          }
+	      },
+	      // 7. Remove redundant CSS
+	      uncss: {
 				  dist: {
 				    files: {
 				      '_dest/css/style.css': ['index.html']
 				    }
 				  }
+				},
+				// Prettify
+				prettify: {
+				   options: {
+				    indent: 2,
+				    indent_char: ' ',
+				    wrap_line_length: 78,
+				    brace_style: 'expand',
+				    unformatted: ['a', 'sub', 'sup', 'b', 'i', 'u']
+				  },
+				    all: {
+					    expand: true,
+					    cwd: '_src',
+					    ext: '.html',
+					    src: ['*.html'],
+					    dest: ''
+					  },
 				},
         // 6. Watch for new files
         watch: {
@@ -81,8 +98,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-uncss');
+    grunt.loadNpmTasks('grunt-prettify');
 
     // 8. Register all the tasks.
-    grunt.registerTask('default', ['concat', 'uglify', 'sass', 'imagemin', 'watch', 'shell', 'uncss']);
+    grunt.registerTask('default', ['concat', 'uglify', 'prettify', 'sass', 'imagemin', 'watch', 'shell', 'uncss']);
 
 };

@@ -6,3 +6,4 @@ normalize.scssc
 layout.scssc
 base.scssc
 node_modules/*
+_src/.DS_Store
