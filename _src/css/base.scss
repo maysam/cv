@@ -31,9 +31,8 @@
 	body{
 		background:#c1c1c1;
 		color:#606060;
-		font:12px Arial, sans-serif;
-		font-weight:300;
-		line-height:20px;
+		font:16px 'Lato', sans-serif;
+		line-height:24px;
 	}
 
 	h1,
@@ -43,7 +42,6 @@
 	h5,
 	h6{
 		color:#444;
-		font-family:'Open Sans', Arial, sans-serif;
 		font-weight:normal;
 	}
 
@@ -191,7 +189,7 @@
 
 	a,
 	a:visited{
-		color:#346699;
+		color:#0071bc;
 		text-decoration:none;
 		outline:0;
 	}
@@ -221,7 +219,7 @@
 
 	li{ }
 
-	ul{ list-style-type:disc; }
+	ul{ list-style-type:disc; padding-left:0;}
 	ol{ list-style-type:decimal; }
 
 	/* List Helper Classes */
@@ -242,6 +240,13 @@
 	img{
 		-ms-interpolation-mode:bicubic;
 		border:0;
+	}
+
+	.company-logo {
+		img {
+			width:100%;
+			height:auto;
+		}
 	}
 
 	/* Images Helper Classes */
