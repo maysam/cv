@@ -5,3 +5,4 @@ style.scssc
 normalize.scssc
 layout.scssc
 base.scssc
+node_modules/*
