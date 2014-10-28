@@ -42,6 +42,14 @@ module.exports = function(grunt) {
                 }
             }
         },
+        // 7. Remove redundant CSS
+        uncss: {
+				  dist: {
+				    files: {
+				      '_dest/css/style.css': ['index.html']
+				    }
+				  }
+				},
         // 6. Watch for new files
         watch: {
            options: {
@@ -72,8 +80,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-shell');
+    grunt.loadNpmTasks('grunt-uncss');
 
     // 8. Register all the tasks.
-    grunt.registerTask('default', ['concat', 'uglify', 'sass', 'watch', 'shell']);
+    grunt.registerTask('default', ['concat', 'uglify', 'sass', 'watch', 'shell', 'grunt-uncss']);
 
 };
