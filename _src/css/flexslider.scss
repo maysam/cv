@@ -100,7 +100,7 @@ html[xmlns] .slides {
   display: block;
   float: none;
   height: 26px;
-  opacity: 0.1;
+  opacity: 0.5;
   position: absolute;
   right: -55px;
   text-indent: -9999px;
@@ -108,22 +108,12 @@ html[xmlns] .slides {
   width: 26px;
 }
 
-.ie7 .flex-direction-nav a {}
-
-
-
 
 /* Control Nav - pager navigation*/
 
-
-
-
-
-
-
-
-
-
+.flex-direction-nav {
+	background:pink;
+}
 
 .flex-direction-nav .flex-next {
   background: url(images/bg_direction_nav.png) no-repeat -30px 0;
@@ -183,9 +173,6 @@ html[xmlns] .slides {
 .flex-control-paging li a.flex-active {
   cursor: default;
 }
-.flexslider img {}
-
-
 
 @media only screen and (max-width: 959px) {
   .flex-direction-nav a {
