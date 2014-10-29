@@ -35,10 +35,12 @@
 /* #Media Queries
 ==================================================================================================== */
 
-.logo {
+header .logo {
   color: #E88B0C;
   line-height: 29px;
   margin-bottom: 0;
+  margin-top:0;
+  font-size:32px;
   text-transform: uppercase;
 }
 .logo small {
@@ -402,4 +404,8 @@ footer {
 	color:#ffffff;
 	padding:10px 10px 20px;
 	text-align: center;
+}
+
+.core {
+	padding-top:36px;
 }
