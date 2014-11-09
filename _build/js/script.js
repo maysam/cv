@@ -51,29 +51,37 @@ return(!i||i!==r&&!b.contains(r,i))&&(e.type=o.origType,n=o.handler.apply(this,a
 
 
 	$(document).ready(function(){
-	//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-		// -------------------------------------------------------------------------------------------------------
-		// FlexSlider - responsive slider |
-		// -------------------------------------------------------------------------------------------------------
+		function generatePDF() {
 
-		$('.flexslider').flexslider({
-			animation: "fade",            //String: Select your animation type, "fade" or "slide"
-			slideshow: false,              //Boolean: Animate slider automatically
-			slideshowSpeed: 7000,         //Integer: Set the speed of the slideshow cycling, in milliseconds
-			initDelay: 0,                 //Integer: Set an initialization delay, in milliseconds
-			pauseOnAction: true,          //Boolean: Pause the slideshow when interacting with control elements, highly recommended.
-			pauseOnHover: true,          //Boolean: Pause the slideshow when hovering over slider, then resume when no longer hovering
-			video: false,                 //Boolean: If using video in the slider, will prevent CSS3 3D Transforms to avoid graphical glitches
-			// Primary Controls
-			controlNav: true,            //Boolean: Create navigation for paging control of each clide?
-			directionNav: true,           //Boolean: Create navigation for previous/next navigation? (true/false)
-			prevText: "Previous",         //String: Set the text for the "previous" directionNav item
-			nextText: "Next"              //String: Set the text for the "next" directionNav item
-		});
+			var doc = new jsPDF();
+			doc.setFont("helvetica");
 
+			var header1 = $('[data-pdf="header-1"]').html();
 
-	//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			doc.setTextColor(100);
+			doc.text(20, 20, header1);
+
+			doc.setTextColor(150);
+			doc.text(20, 30, 'This is light gray.');
+
+			doc.setTextColor(255,0,0);
+			doc.text(20, 40, 'This is red.');
+
+			doc.setTextColor(0,255,0);
+			doc.text(20, 50, 'This is green.');
+
+			doc.setTextColor(0,0,255);
+			doc.text(20, 60, 'This is blue.');
+
+			doc.save('Test.pdf');
+
+    }
+
+    $(".pdf.button").click(function() {
+      generatePDF();
+    });
+
 	});
 
 })(window.jQuery);

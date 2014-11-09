@@ -8,16 +8,16 @@ module.exports = function(grunt) {
         // Configuration for concatinating files goes here.
           dist: {
               src: [
-                  '_src/js/*.js', // All JS in the libs folder
+                  'js/*.js', // All JS in the libs folder
               ],
-              dest: '_dest/js/script.js',
+              dest: '_build/js/script.js',
           }
         },
         uglify: {
         // Minifiy JS
             build: {
-                src: '_dest/js/script.js',
-                dest: '_dest/js/script.min.js'
+                src: '_build/js/script.js',
+                dest: '_build/js/script.min.js'
             }
         },
         imagemin: {
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
             dynamic: {
                 files: [{
                     expand: true,
-                    cwd: '_src/img',
+                    cwd: '/img',
                     src: ['**/*.{png,jpg,gif}'],
                     dest: 'img/'
                 }]
@@ -38,7 +38,7 @@ module.exports = function(grunt) {
                     style: 'compressed'
                 },
                 files: {
-                    '_dest/css/style.css': '_src/css/style.scss'
+                    '_build/css/style.css': 'css/style.scss'
                 }
 	          }
 	      },
@@ -46,7 +46,7 @@ module.exports = function(grunt) {
 	      uncss: {
 				  dist: {
 				    files: {
-				      '_dest/css/style.css': ['index.html']
+				      '_build/css/style.css': ['index.html']
 				    }
 				  }
 				},
@@ -61,7 +61,7 @@ module.exports = function(grunt) {
 				  },
 				    all: {
 					    expand: true,
-					    cwd: '_src',
+					    cwd: '',
 					    ext: '.html',
 					    src: ['*.html'],
 					    dest: ''
@@ -73,7 +73,7 @@ module.exports = function(grunt) {
 			      alphabetize: true
 			    },
 			    app: {
-			      src: ['_src/css/**/*.scss']
+			      src: ['css/**/*.scss']
 			    },
 			  },
 			  // Auto-prefix unsupported rules
@@ -81,25 +81,44 @@ module.exports = function(grunt) {
 			    multiple_files: {
 			      expand: true,
 			      flatten: true,
-			      src: '_src/css/*.css', // -> src/css/file1.css, src/css/file2.css
-			      dest: '_dest/css/' // -> dest/css/file1.css, dest/css/file2.css
+			      src: 'css/*.css', // -> src/css/file1.css, src/css/file2.css
+			      dest: '_build/css/' // -> dest/css/file1.css, dest/css/file2.css
 			    }
 				},
+				html_minify: {
+					options: {},
+					all: {
+						files:[{
+							expand: true,
+							cwd: '',
+							src: ['*.html'],
+							dest: '_build/',
+							ext:'.html'
+						}]
+					}
+		    },
         // Watch for new files
         watch: {
            options: {
                 livereload: true
             },
             scripts: {
-                files: ['_src/js/*.js'],
+                files: ['js/*.js'],
                 tasks: ['concat', 'uglify'],
                 options: {
                     spawn: false,
                 },
             },
             css: {
-              files: ['_src/css/*.scss'],
+              files: ['css/*.scss'],
               tasks: ['sass', 'uglify'],
+              options: {
+                  spawn: false,
+              }
+            },
+            html: {
+              files: ['*.html'],
+              tasks: ['newer:html_minify'],
               options: {
                   spawn: false,
               }
@@ -108,7 +127,7 @@ module.exports = function(grunt) {
     });
 
 
-    // 7. Where we tell Grunt we plan to use this plug-in.
+    // Where we tell Grunt we plan to use this plug-in.
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
@@ -119,8 +138,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-prettify');
     grunt.loadNpmTasks('grunt-prettysass');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-html-minify');
+    grunt.loadNpmTasks('grunt-newer');
 
     // 8. Register all the tasks.
-    grunt.registerTask('default', ['concat', 'uglify', 'sass', 'imagemin', 'watch', 'shell', 'uncss']);
+    grunt.registerTask('default', ['concat', 'uglify', 'sass', 'newer:imagemin', 'html_minify', 'watch', 'shell', 'uncss']);
 
 };
