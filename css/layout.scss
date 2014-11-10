@@ -35,6 +35,31 @@
 /* #Media Queries
 ==================================================================================================== */
 
+
+.download-button {
+	color:#fff;
+	padding:10px;
+	background:#e88b0c;
+	font-style: italic;
+	display: block;
+	margin:auto;
+	text-align: center;
+	width:140px;
+	box-shadow: rgb(96, 96, 96) 2px 2px 1px 0px;
+	margin-top:20px;
+	margin-bottom:-40px;
+	&:visited {
+		color:#fff;
+	}
+	&:active {
+		color:#fff;
+		box-shadow: none;
+		position: relative;
+		top:2px;
+		left:2px;
+	}
+}
+
 header .logo {
   color: #E88B0C;
   line-height: 29px;
@@ -256,36 +281,16 @@ header .logo {
 /* #Tablet (Portrait) - designed for 705px width grid */
 
 }
-@media only screen and (min-width: 768px) and (max-width: 959px) {
 
-/* #Mobile (Portrait) - designed for 280px width */
-
-  .wrap {
-    box-shadow: 2px 2px 1px #606060;
-    box-shadow: 2px 2px 1px #606060;
-    margin: 40px auto;
-    padding: 60px 0;
-    width: auto;
-  }
-  .wrap + .wrap {
-    margin-top: 0px;
-  }
-  .portfolio-items {
-    margin: 0 0 40px 0;
-    padding: 80px 0;
-  }
-  #contact-form textarea {
-    width: 255px;
-  }
-  #contact-form input[type="text"] {
-    width: 205px;
-  }
-}
 @media only screen and (max-width: 767px) {
 
 /* #Mobile (Landscape) - designed for 420px width */
 
-  body {}
+	.download-button {
+		margin-top:20px;
+		margin-bottom:0px;
+	}
+	
   .hide-on-phone {
     display: none;
   }
@@ -352,22 +357,7 @@ header .logo {
   }
   /* move send buton to the left */
 }
-@media only screen and (min-width: 480px) and (max-width: 767px) {
 
-
-/* #Print
-==================================================================================================== */
-
-  .wrap {
-    width: auto;
-  }
-  .portfolio-items {
-    padding: 60px 0;
-  }
-  #contact-form textarea {
-    width: 370px;
-  }
-}
 @media print {
   body {
     background-color: #fff;
