@@ -3,16 +3,7 @@
 	Name: layout.css
 	Version: 1.0.0
 
-	-
 
-	Table of Contents
-========================
-
-  #Site Styles
-	#Media Queries
-	#Print
-
-*/
 
 /* #Site Styles (>1024px width screen resolutions)
 ==================================================================================================== */
@@ -30,24 +21,16 @@
   margin-top: -40px;
 }
 
-/* #Smaller then 1024px wide screen resolution */
-
-/* #Media Queries
-==================================================================================================== */
-
-
 .download-button {
 	color:#fff;
 	padding:10px;
-	background:#e88b0c;
+	background:$highlight;
 	font-style: italic;
 	display: block;
 	margin:auto;
 	text-align: center;
 	width:140px;
 	box-shadow: rgb(96, 96, 96) 2px 2px 1px 0px;
-	margin-top:20px;
-	margin-bottom:-40px;
 	&:visited {
 		color:#fff;
 	}
@@ -61,7 +44,7 @@
 }
 
 header .logo {
-  color: #E88B0C;
+  color: $highlight;
   line-height: 29px;
   margin-bottom: 0;
   margin-top:0;
@@ -96,8 +79,8 @@ header .logo {
   text-align: center;
 }
 .cv-section-title {
-  border-bottom: 1px solid #E88B0C;
-  color: #E88B0C;
+  border-bottom: 1px solid $highlight;
+  color: $highlight;
   line-height: 18px;
   margin: 0 0 40px 0;
   padding-bottom: 8px;
@@ -161,70 +144,70 @@ header .logo {
   width: 100%;
 }
 .l-1 {
-  background-color: #0071bc;
+  background-color: $complementary;
   border-radius: 5px 0 0 5px;
   display: block;
   height: 5px;
   width: 10%;
 }
 .l-2 {
-  background-color: #0071bc;
+  background-color: $complementary;
   border-radius: 5px 0 0 5px;
   display: block;
   height: 5px;
   width: 20%;
 }
 .l-3 {
-  background-color: #0071bc;
+  background-color: $complementary;
   border-radius: 5px 0 0 5px;
   display: block;
   height: 5px;
   width: 30%;
 }
 .l-4 {
-  background-color: #0071bc;
+  background-color: $complementary;
   border-radius: 5px 0 0 5px;
   display: block;
   height: 5px;
   width: 40%;
 }
 .l-5 {
-  background-color: #0071bc;
+  background-color: $complementary;
   border-radius: 5px 0 0 5px;
   display: block;
   height: 5px;
   width: 50%;
 }
 .l-6 {
-  background-color: #0071bc;
+  background-color: $complementary;
   border-radius: 5px 0 0 5px;
   display: block;
   height: 5px;
   width: 60%;
 }
 .l-7 {
-  background-color: #0071bc;
+  background-color: $complementary;
   border-radius: 5px 0 0 5px;
   display: block;
   height: 5px;
   width: 70%;
 }
 .l-8 {
-  background-color: #0071bc;
+  background-color: $complementary;
   border-radius: 5px 0 0 5px;
   display: block;
   height: 5px;
   width: 80%;
 }
 .l-9 {
-  background-color: #0071bc;
+  background-color: $complementary;
   border-radius: 5px 0 0 5px;
   display: block;
   height: 5px;
   width: 90%;
 }
 .l-10 {
-  background-color: #0071bc;
+  background-color: $complementary;
   border-radius: 5px;
   display: block;
   height: 5px;
@@ -251,40 +234,10 @@ header .logo {
   font-size: 16px;
   margin-left: 5px;
 }
-#contact-form {
-  overflow: hidden;
-}
-#contact-form fieldset {
-  margin: 0;
-  padding: 0;
-}
-#contact-form p#formstatus {
-  margin-bottom: 0;
-}
-#contact-form textarea {
-  color: #ccc;
-  padding: 9px 10px;
-  width: 277px;
-}
-#contact-form textarea:focus {
-  color: #444;
-}
-#contact-form input[type="text"] {
-  color: #ccc;
-}
-#contact-form input[type="text"]:focus {
-  color: #444;
-}
-@media only screen and (max-width: 1024px) {
-  body {}
 
-/* #Tablet (Portrait) - designed for 705px width grid */
-
-}
 
 @media only screen and (max-width: 767px) {
 
-/* #Mobile (Landscape) - designed for 420px width */
 
 	.download-button {
 		margin-top:20px;
@@ -330,7 +283,7 @@ header .logo {
     margin-bottom: 40px;
   }
   .cv-section-title {
-    color: #E88B0C;
+    color: $highlight;
     margin: -10px 0 40px 0;
   }
   .portfolio-items {
@@ -346,16 +299,6 @@ header .logo {
   .contact-info-2 li {
     float: none;
   }
-  #contact-form {
-    margin-bottom: 0;
-  }
-  #contact-form textarea {
-    width: 220px;
-  }
-  #contact-form .text-right {
-    text-align: left;
-  }
-  /* move send buton to the left */
 }
 
 @media print {
@@ -379,7 +322,7 @@ header .logo {
   .l-1, .l-2, .l-3, .l-4, .l-5, .l-6, .l-7, .l-8, .l-9, .l-10 {
     width: 100%;
   }
-  .skill p, #contact-form {
+  .skill p {
     display: none;
   }
   .contact-info-2 li {
@@ -394,8 +337,4 @@ footer {
 	color:#ffffff;
 	padding:10px 10px 20px;
 	text-align: center;
-}
-
-.core {
-	padding-top:36px;
 }
