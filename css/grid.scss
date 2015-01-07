@@ -1,324 +1,150 @@
 /*
-
-	Name: grid.css
-	Version: 1.0.0
-
-	-
-
-	Table of Contents
-========================
-
-	#Base Grid
-	#Tablet (Portrait)
-	#Mobile (Portrait)
-	#Mobile (Landscape)
-	#Align
-	#Responsive Images and Embeds
-	#Clearing Content
-
+* Skeleton V2.0.2
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/15/2014
 */
 
-/*  #Base  Grid
-==================================================================================================== */
 
-.row {
-  margin: 0 auto;
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Grid
+- Utils
+- Media Queries
+*/
+
+
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
   position: relative;
-  width: 760px;
-}
-
-.row .row {
-  margin: 0;
-  width: auto;
-}
-
-.span1,
-.span2,
-.span3,
-.span4,
-.span5,
-.span6,
-.span7,
-.span8,
-.span9,
-.span10,
-.span11,
-.span12 {
-  float: left;
-}
-
-.span1 {
-  margin-left: 20px;
-  width: 45px;
-}
-
-.span2 {
-  margin-left: 20px;
-  width: 110px;
-}
-
-.span3 {
-  margin-left: 20px;
-  width: 175px;
-}
-
-.span4 {
-  margin-left: 20px;
-  width: 240px;
-}
-
-.span5 {
-  margin-left: 20px;
-  width: 305px;
-}
-
-.span6 {
-  margin-left: 20px;
-  width: 370px;
-}
-
-.span7 {
-  margin-left: 20px;
-  width: 435px;
-}
-
-.span8 {
-  margin-left: 20px;
-  width: 500px;
-}
-
-.span9 {
-  margin-left: 20px;
-  width: 565px;
-}
-
-.span10 {
-  margin-left: 20px;
-  width: 630px;
-}
-
-.span11 {
-  margin-left: 20px;
-  width: 695px;
-}
-
-.span12 {
-  margin-left: 20px;
-  width: 760px;
-}
-
-.span1:first-child,
-.span2:first-child,
-.span3:first-child,
-.span4:first-child,
-.span5:first-child,
-.span6:first-child,
-.span7:first-child,
-.span8:first-child,
-.span9:first-child,
-.span10:first-child,
-.span11:first-child,
-.span12:first-child {
-  margin-left: 0;
-}
-
-/*  #Tablet (Portrait)
-==================================================================================================== */
-
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-  .row {
-    width: 705px;
-  }
-  .span1 {
-    margin-left: 15px;
-    width: 45px;
-  }
-  .span2 {
-    margin-left: 15px;
-    width: 105px;
-  }
-  .span3 {
-    margin-left: 15px;
-    width: 165px;
-  }
-  .span4 {
-    margin-left: 15px;
-    width: 225px;
-  }
-  .span5 {
-    margin-left: 15px;
-    width: 285px;
-  }
-  .span6 {
-    margin-left: 15px;
-    width: 345px;
-  }
-  .span7 {
-    margin-left: 15px;
-    width: 405px;
-  }
-  .span8 {
-    margin-left: 15px;
-    width: 465px;
-  }
-  .span9 {
-    margin-left: 15px;
-    width: 525px;
-  }
-  .span10 {
-    margin-left: 15px;
-    width: 585px;
-  }
-  .span11 {
-    margin-left: 15px;
-    width: 646px;
-  }
-  .span12 {
-    margin-left: 15px;
-    width: 705px;
-  }
-}
-
-/*  #Mobile (Portrait)
-==================================================================================================== */
-
-@media only screen and (max-width: 767px) {
-  .row {
-    width: 280px;
-  }
-  .span1,
-  .span2,
-  .span3,
-  .span4,
-  .span5,
-  .span6,
-  .span7,
-  .span8,
-  .span9,
-  .span10,
-  .span11,
-  .span12 {
-    margin-left: 0;
-    width: 280px;
-  }
-}
-
-/*  #Mobile (Landscape)
-==================================================================================================== */
-
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  .row {
-    width: 420px;
-  }
-  .span1,
-  .span2,
-  .span3,
-  .span4,
-  .span5,
-  .span6,
-  .span7,
-  .span8,
-  .span9,
-  .span10,
-  .span11,
-  .span12 {
-    margin-left: 0;
-    width: 420px;
-  }
-}
-
-/*  #Align
-==================================================================================================== */
-
-.float-left {
-  float: left;
-}
-
-.float-right {
-  float: right;
-}
-
-/*  #Responsive Images and Embedss
-==================================================================================================== */
-
-.responsive-img {
-  height: auto;
-  max-width: 100%;
-}
-
-.responsive-embed {
-  /* 16/9 ratio */
-  height: 0;
-  margin-bottom: 20px;
-  overflow: hidden;
-  padding-bottom: 56.25%;
-  padding: 0px;
-  position: relative;
-}
-
-.responsive-embed iframe,
-.responsive-embed object,
-.responsive-embed embed {
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
   width: 100%;
+  max-width: 960px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box; }
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box; }
+
+/* Self Clearing Goodness */
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }
+
+/* For devices larger than 400px */
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0; }
 }
 
-/*  #Clearing
-==================================================================================================== */
+/* For devices larger than 550px */
+@media (min-width: 550px) {
+  .column,
+  .columns {
+    margin-left: 4%; }
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0; }
 
-.row:after {
-  clear: both;
-  content: ".";
-  display: block;
-  height: 0;
-  visibility: hidden;
+  .one.column,
+  .one.columns                    { width: 4.66666666667%; }
+  .two.columns                    { width: 13.3333333333%; }
+  .three.columns                  { width: 22%;            }
+  .four.columns                   { width: 30.6666666667%; }
+  .five.columns                   { width: 39.3333333333%; }
+  .six.columns                    { width: 48%;            }
+  .seven.columns                  { width: 56.6666666667%; }
+  .eight.columns                  { width: 65.3333333333%; }
+  .nine.columns                   { width: 74.0%;          }
+  .ten.columns                    { width: 82.6666666667%; }
+  .eleven.columns                 { width: 91.3333333333%; }
+  .twelve.columns                 { width: 100%; margin-left: 0; }
+
+  .one-third.column               { width: 30.6666666667%; }
+  .two-thirds.column              { width: 65.3333333333%; }
+
+  .one-half.column                { width: 48%; }
+
+  /* Offsets */
+  .offset-by-one.column,
+  .offset-by-one.columns          { margin-left: 8.66666666667%; }
+  .offset-by-two.column,
+  .offset-by-two.columns          { margin-left: 17.3333333333%; }
+  .offset-by-three.column,
+  .offset-by-three.columns        { margin-left: 26%;            }
+  .offset-by-four.column,
+  .offset-by-four.columns         { margin-left: 34.6666666667%; }
+  .offset-by-five.column,
+  .offset-by-five.columns         { margin-left: 43.3333333333%; }
+  .offset-by-six.column,
+  .offset-by-six.columns          { margin-left: 52%;            }
+  .offset-by-seven.column,
+  .offset-by-seven.columns        { margin-left: 60.6666666667%; }
+  .offset-by-eight.column,
+  .offset-by-eight.columns        { margin-left: 69.3333333333%; }
+  .offset-by-nine.column,
+  .offset-by-nine.columns         { margin-left: 78.0%;          }
+  .offset-by-ten.column,
+  .offset-by-ten.columns          { margin-left: 86.6666666667%; }
+  .offset-by-eleven.column,
+  .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
+
+  .offset-by-one-third.column,
+  .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+  .offset-by-two-thirds.column,
+  .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+
+  .offset-by-one-half.column,
+  .offset-by-one-half.columns     { margin-left: 52%; }
+
 }
 
-.row {
-  display: block;
-}
 
-/*  \*/
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box; }
+.u-max-full-width {
+  max-width: 100%;
+  box-sizing: border-box; }
+.u-pull-right {
+  float: right; }
+.u-pull-left {
+  float: left; }
 
-.row {
-  min-height: 1%;
-}
 
-* html .row {
-  height: 1%;
-}
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+*/
 
-/* Clear Fix Hack - add  class="fixed"  to div's that have floated elements in them */
-.fixed:after {
-  clear: both;
-  content: ".";
-  display: block;
-  height: 0;
-  visibility: hidden;
-}
 
-.fixed {
-  display: block;
-}
+/* Larger than mobile */
+@media (min-width: 400px) {}
 
-/*  \*/
-.fixed {
-  min-height: 1%;
-}
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {}
 
-* html .fixed {
-  height: 1%;
-}
+/* Larger than tablet */
+@media (min-width: 750px) {}
 
-/* Clear <br class="clear" /> */
-.clear {
-  clear: both;
-  display: block;
-  height: 0;
-  overflow: hidden;
-  visibility: hidden;
-  width: 0;
-}
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
