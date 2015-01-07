@@ -1,9 +1,16 @@
 /* Colors
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-$background : #a6a6a6;
-$highlight : #e88b0c;
-$complementary : #0071bc;
+$background: #a6a6a6;
+$highlight: #e88b0c;
+$complementary: #0071bc;
 
-$dark : #000;
-$light : #fff;
+$dark: #606060;
+$light: #fff;
+
+/* Breakpoints
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$small: "460px";
+$medium: "690px";
+$large: "1024px";
+$x-large: "1200px";

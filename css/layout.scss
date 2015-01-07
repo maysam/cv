@@ -4,72 +4,110 @@
 	Version: 1.0.0
 */
 
-.container {
-  padding-top:40px;
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  text-align: center;
 }
 
 .wrap {
-  box-sizing: border-box;
-  box-shadow: 2px 2px 1px #606060;
   background-color: $light;
-  box-shadow: 2px 2px 1px #606060;
-  margin: 40px auto;
-  padding: 80px 80px 60px 80px;
+  box-shadow: 0 0 4px $dark;
+  margin: 25px auto;
+  padding: 60px 20px;
   width: 100%;
+  width: auto;
+}
+
+.contact-info {
+  @extend .u-cf;
+  margin-top: 20px;
+  li {
+    float: left;
+    margin-right: 10px;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.cv-item-description {
+  text-align: left;
+  h6 {
+    padding: 10px;
+  }
+}
+
+.cv-item-description .cv-item {
+  margin-bottom: 40px;
+}
+
+.cv-section-title {
+  color: $highlight;
+  margin: -10px 0 40px 0;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.container {
+  padding-top: 40px;
 }
 
 .cta-button {
-	color:$light;
-	padding:10px;
-	background:$highlight;
-	font-style: italic;
-	display: block;
-	margin:auto;
-	text-align: center;
-	width:140px;
-	box-shadow: rgb(96, 96, 96) 2px 2px 1px 0px;
-	&:visited {
-		color:$light;
-	}
-	&:active {
-		color:$light;
-		box-shadow: none;
-		position: relative;
-		top:2px;
-		left:2px;
-	}
+  @include rem(padding, 1rem);
+  background: $highlight;
+  box-shadow: 0 0 4px $dark;
+  color: $light;
+  display: block;
+  font-style: italic;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  &:visited {
+    color: $light;
+  }
+  &:active {
+    box-shadow: none;
+    color: $light;
+    left: 2px;
+    position: relative;
+    top: 2px;
+  }
 }
 
 header .logo {
   color: $highlight;
+  font-size: 32px;
   line-height: 29px;
   margin-bottom: 0;
-  margin-top:0;
-  font-size:32px;
+  margin-top: 0;
   text-transform: uppercase;
 }
+
 .logo small {
-  color: #444;
+  color: $dark;
   font-size: 14px;
   font-weight: 300;
 }
 
 .contact-info {
   list-style: none;
-  margin-bottom: 0;
-  margin-left: 0;
-  margin-top: 0;
 }
+
 .cv-profile {
+  @include rem(font-size, 1.85rem);
   border-bottom: 1px solid #efefef;
   border-top: 1px solid #efefef;
-  font-size: 20px;
   font-weight: 300;
   line-height: 32px;
   margin: 40px 0 40px 0;
   padding: 40px 0;
   text-align: center;
 }
+
 .cv-section-title {
   border-bottom: 1px solid $highlight;
   color: $highlight;
@@ -77,12 +115,15 @@ header .logo {
   margin: 0 0 40px 0;
   padding-bottom: 8px;
 }
+
 .cv-item {
   margin-bottom: 40px;
 }
+
 .cv-item-description {
-  text-align: right;
+  text-align: center;
 }
+
 .cv-item-description h6 {
   background-color: #f5f5f5;
   border-radius: 5px;
@@ -94,14 +135,23 @@ header .logo {
     background: none;
   }
 }
+
 .highlight {
   background-color: #f5f5f5;
   border-radius: 5px;
   padding: 0 10px;
 }
+
 .cv-item-details {
+  ul {
+    @include rem(padding-left, 1.6rem);
+  }
+  .inline-list {
+    padding: 0;
+  }
   h4 {
-    font-size: 30px;
+    @include rem(font-size, 2.5rem);
+    border-bottom: 1px dotted $background;
     line-height: 40px;
     margin-bottom: 24px;
   }
@@ -117,6 +167,7 @@ header .logo {
     }
   }
 }
+
 .skill {
   margin-bottom: 40px;
   h4 {
@@ -129,6 +180,7 @@ header .logo {
     text-align: right;
   }
 }
+
 .level {
   background-color: #e2e2e2;
   border-radius: 5px;
@@ -147,85 +199,76 @@ header .logo {
 .l-1 {
   width: 10%;
 }
+
 .l-2 {
   width: 20%;
 }
+
 .l-3 {
   width: 30%;
 }
+
 .l-4 {
   width: 40%;
 }
+
 .l-5 {
   width: 50%;
 }
+
 .l-6 {
   width: 60%;
 }
+
 .l-7 {
   width: 70%;
 }
+
 .l-8 {
   width: 80%;
 }
+
 .l-9 {
   width: 90%;
 }
+
 .l-10 {
   width: 100%;
 }
 
-
-@media only screen and (max-width: 767px) {
-
-
-	.download-button {
-		margin-top:20px;
-		margin-bottom:0px;
-	}
-	
-  .hide-on-phone {
-    display: none;
+@media only screen and (max-width: $medium) {
+  .ctas {
+    .six {
+      width: 46%;
+      &:first-child {
+        margin-right: 8%;
+      }
+    }
   }
+}
+
+@media only screen and (min-width: $small) {
   .wrap {
-    box-shadow: 0 0 4px #606060;
-    margin: 25px auto;
-    padding: 60px 20px;
-    width: auto;
+    @include rem(padding, 6rem 4rem);
   }
-  .wrap + .wrap {
-    box-shadow: 0 4px 4px -2px #606060;
-    margin-top: -180px;
-  }
-  .cv-profile {
-    font-size: 17px;
-  }
-  .contact-info {
-    margin-top: 20px;
-  }
-  .contact-info li {
-    float: left;
-    margin-right: 10px;
-  }
-  .logo {
-    margin-bottom: 0px;
-    text-align: center;
-  }
-  .cv-item-description {
+}
+
+@media only screen and (min-width: $medium) {
+  .header {
+    @include rem(padding, 0 2rem);
     text-align: left;
   }
   .cv-item-description h6 {
-    padding: 10px;
+    @include rem(margin-left, 2rem);
   }
-  .cv-item {
-    margin-bottom: 40px;
+  .cv-profile {
+    @include rem(padding, 4rem);
   }
-  .cv-section-title {
-    color: $highlight;
-    margin: -10px 0 40px 0;
-  }
-  .skill {
-    margin-bottom: 20px;
+  .contact-info {
+    margin-top: 0;
+    li {
+      text-align: left;
+    }
   }
 }
 
@@ -236,23 +279,13 @@ header .logo {
   }
   .wrap {
     box-shadow: none;
-    box-shadow: none;
     padding: 40px 80px;
   }
   .level {
     margin-top: -10px;
     text-indent: 0;
+    span {
+      width: 100%;
+    }
   }
-  .l-1, .l-2, .l-3, .l-4, .l-5, .l-6, .l-7, .l-8, .l-9, .l-10 {
-    width: 100%;
-  }
-  .skill p {
-    display: none;
-  }
-}
-
-footer {
-	color:$light;
-	padding:10px 10px 20px;
-	text-align: center;
 }
