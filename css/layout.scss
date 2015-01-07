@@ -8,13 +8,18 @@
 /* #Site Styles (>1024px width screen resolutions)
 ==================================================================================================== */
 
+.container {
+  padding-top:40px;
+}
+
 .wrap {
+  box-sizing: border-box;
   box-shadow: 2px 2px 1px #606060;
   background-color: #fff;
   box-shadow: 2px 2px 1px #606060;
-  margin: 80px auto;
+  margin: 40px auto;
   padding: 80px 80px 60px 80px;
-  width: 760px;
+  width: 100%;
 }
 
 .wrap + .wrap {
@@ -251,7 +256,7 @@ header .logo {
     box-shadow: 0 0 4px #606060;
     box-shadow: 0 0 4px #606060;
     margin: 25px auto;
-    padding: 60px 0;
+    padding: 60px 20px;
     width: auto;
   }
   .wrap + .wrap {
