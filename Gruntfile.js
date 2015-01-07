@@ -85,6 +85,11 @@ module.exports = function(grunt) {
 			      dest: '_build/css/' // -> dest/css/file1.css, dest/css/file2.css
 			    }
 				},
+        csscss: {
+          dist: {
+            src: ['_build/css/style.css']
+          }
+        },
 				html_minify: {
 					options: {},
 					all: {
@@ -140,8 +145,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-html-minify');
     grunt.loadNpmTasks('grunt-newer');
+    grunt.loadNpmTasks('grunt-csscss');
 
     // 8. Register all the tasks.
-    grunt.registerTask('default', ['concat', 'uglify', 'sass', 'newer:imagemin', 'html_minify', 'watch', 'shell', 'uncss']);
+    grunt.registerTask('default', ['csscss', 'concat', 'uglify', 'sass', 'newer:imagemin', 'html_minify', 'watch', 'shell', 'uncss']);
 
 };
