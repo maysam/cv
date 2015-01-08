@@ -123,7 +123,7 @@ module.exports = function(grunt) {
             },
             html: {
               files: ['*.html'],
-              tasks: ['newer:html_minify'],
+              tasks: ['html_minify'],
               options: {
                   spawn: false,
               }
