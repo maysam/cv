@@ -11,6 +11,13 @@
     <link href="css/critical.css?__inline=true" rel="stylesheet" media="all" type='text/css' />
     <link href="css/style.css?v=45f5" rel="stylesheet" media="all" type='text/css' />
     <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.js" async></script>
+
 </head>
 
 <body>
@@ -263,7 +270,15 @@
 
             <div class="row cv-item">
                 <div class="columns three cv-item-description">
-                    <h6 class="company-logo"><img src="img/futurelearn-logo.png" alt="FutureLearn logo"></h6>
+                    <h6 class="company-logo">
+                      <picture>
+                          <source srcset="img/res/futurelearn-logo-large.png" media="(max-width: 468px)" />
+                          <source srcset="img/res/futurelearn-logo-320.png" />
+                          <source srcset="img/futurelearn-logo.png" />
+                          <img src="img/futurelearn-logo.png" alt="FutureLearn logo" />
+                      </picture>
+
+                    </h6>
 
                     <p><span class="date">July 2013 - Dec 2014</span></p>
                 </div><!-- end .columns three -->
@@ -297,8 +312,14 @@
 
             <div class="row cv-item">
                 <div class="columns three cv-item-description">
-                    <h6 class="company-logo"><img src="img/othermedia-logo.png" alt="Other Media"></h6>
-
+                    <h6 class="company-logo">
+                      <picture>
+                          <source srcset="img/res/othermedia-logo-large.png" media="(max-width: 468px)" />
+                          <source srcset="img/res/othermedia-logo-320.png" />
+                          <source srcset="img/othermedia-logo.png" />
+                          <img src="img/othermedia-logo.png" alt="Other Media logo" />
+                      </picture>
+                    </h6>
                     <p><span class="date">June 2013 - July 2013</span></p>
                 </div>
 
@@ -324,7 +345,14 @@
 
             <div class="row cv-item">
                 <div class="columns three cv-item-description">
-                    <h6 class="company-logo"><img src="img/bbc-logo.png" alt="BBC iPlayer logo"></h6>
+                    <h6 class="company-logo">
+                      <picture>
+                          <source srcset="img/res/bbc-logo-large.png" media="(max-width: 468px)" />
+                          <source srcset="img/res/bbc-logo-320.png" />
+                          <source srcset="img/bbc-logo.png" />
+                          <img src="img/bbc-logo.png" alt="BBC logo" />
+                      </picture>
+                    </h6>
 
                     <p><span class="date">July 2007 - June 2012</span></p>
                 </div>
@@ -363,7 +391,14 @@
 
             <div class="row cv-item">
                 <div class="columns three cv-item-description">
-                    <h6 class="company-logo"><img src="img/uu-logo.gif" alt="University of Ulster"></h6>
+                    <h6 class="company-logo">
+                      <picture>
+                          <source srcset="img/res/uu-logo-large.gif" media="(max-width: 468px)" />
+                          <source srcset="img/res/uu-logo-320.gif" />
+                          <source srcset="img/uu-logo.gif" />
+                          <img src="img/uu-logo.gif" alt="University of Ulster logo" />
+                      </picture>
+                    </h6>
 
                     <p>Belfast, Northern Ireland<br>
                     <span class="date">2003 - 2007</span></p>

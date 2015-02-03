@@ -132,6 +132,29 @@ module.exports = function(grunt) {
                 reporterOutput: null
             },
         },
+        responsive_images: {
+          myTask: {
+            options: {
+              sizes: [{
+                width: 320
+              },{
+                name: 'large',
+                width: 468
+              },{
+                name: "large",
+                width: 936,
+                suffix: "_x2",
+                quality: 60
+              }]
+            },
+            files: [{
+              expand: true,
+              src: ['**.{jpg,gif,png}'],
+              cwd: 'img',
+              dest: '_build/img/res/'
+            }]
+          }
+        },
         // Watch for new files
         watch: {
            options: {
@@ -179,6 +202,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-scss-lint');
     grunt.loadNpmTasks('grunt-criticalcss');
     grunt.loadNpmTasks('grunt-inline');
+    grunt.loadNpmTasks('grunt-responsive-images');
 
     // 8. Register all the tasks.
     grunt.registerTask('default', ['csscss', 'scsslint', 'concat', 'uglify', 'sass', 'criticalcss', 'newer:imagemin', 'html_minify', 'inline', 'watch', 'shell', 'uncss']);

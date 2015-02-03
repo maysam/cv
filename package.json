@@ -25,6 +25,7 @@
     "grunt-newer": "^0.8.0",
     "grunt-prettify": "^0.4.0",
     "grunt-prettysass": "^0.2.3",
+    "grunt-responsive-images": "^0.1.5",
     "grunt-scss-lint": "^0.3.4",
     "grunt-shell": "^1.1.1",
     "grunt-uncss": "^0.3.7",
