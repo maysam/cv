@@ -20,6 +20,10 @@
   width: auto;
 }
 
+.cv-profile {
+  text-align: center;
+}
+
 .contact-info {
   @extend .u-cf;
   list-style: none;
@@ -54,13 +58,11 @@
 .cv-section-title {
   @include rem(font-size, 1.85rem);
   border-bottom: 1px solid #efefef;
-  border-top: 1px solid #efefef;
   color: $highlight;
   font-weight: 300;
   line-height: 18px;
   margin: 0 0 40px;
   padding: 40px 0 8px;
-  text-align: center;
 }
 
 
