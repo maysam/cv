@@ -144,16 +144,16 @@ module.exports = function(grunt) {
                     spawn: false,
                 },
             },
-            css: {
-              files: ['css/*.scss'],
-              tasks: ['sass', 'scsslint', 'uglify'],
+            html: {
+              files: ['*.html'],
+              tasks: ['html_minify'],
               options: {
                   spawn: false,
               }
             },
-            html: {
-              files: ['*.html'],
-              tasks: ['html_minify'],
+            css: {
+              files: ['css/*.scss'],
+              tasks: ['sass', 'scsslint', 'uglify'],
               options: {
                   spawn: false,
               }
@@ -181,6 +181,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-inline');
 
     // 8. Register all the tasks.
-    grunt.registerTask('default', ['csscss', 'scsslint', 'concat', 'uglify', 'sass', 'criticalcss', 'inline', 'newer:imagemin', 'html_minify', 'watch', 'shell', 'uncss']);
+    grunt.registerTask('default', ['csscss', 'scsslint', 'concat', 'uglify', 'sass', 'criticalcss', 'newer:imagemin', 'html_minify', 'inline', 'watch', 'shell', 'uncss']);
 
 };
