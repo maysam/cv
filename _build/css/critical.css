@@ -1,0 +1,66 @@
+html{ font-family: sans-serif; }
+body{ margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; }
+ header{ display: block; }
+a{ background-color: transparent; }
+h1{ font-size: 2em; margin-top: 0.67em; margin-right: 0px; margin-bottom: 0.67em; margin-left: 0px; }
+small{ font-size: 80%; }
+html{ font-size: 62.5%; }
+body{ background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: rgb(166, 166, 166); color: rgb(96, 96, 96); font-family: Lato, sans-serif; font-size: 1.6rem; line-height: 1.75; background-position: initial initial; background-repeat: initial initial; }
+h1, h2{ font-weight: normal; }
+small{ font-size: 90%; }
+a{ color: rgb(0, 113, 188); outline-width: 0px; outline-style: initial; outline-color: initial; text-decoration: none; }
+ul{ list-style-type: disc; padding-left: 0px; }
+.container{ box-sizing: border-box; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; max-width: 960px; min-width: 320px; padding-top: 0px; padding-right: 20px; padding-bottom: 0px; padding-left: 20px; position: relative; width: 100%; }
+ .columns{ box-sizing: border-box; float: left; width: 100%; }
+.container::after, .row::after, .contact-info{ clear: both; content: ''; display: table; }
+@media (min-width: 400px){
+.container{ padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; width: 85%; }
+}
+@media (min-width: 690px){
+ .columns{ margin-left: 4%; }
+ .columns:first-child{ margin-left: 0px; }
+.four.columns{ width: 30.6666666667%; }
+.six.columns{ width: 48%; }
+.eight.columns{ width: 65.3333333333%; }
+.twelve.columns{ margin-left: 0px; width: 100%; }
+}
+.u-pull-right{ float: right; }
+.u-pull-left{ float: left; }
+*{ box-sizing: border-box; }
+.header{ text-align: center; }
+.wrap{ background-color: rgb(255, 255, 255); box-shadow: rgb(96, 96, 96) 0px 0px 4px; margin-top: 25px; margin-right: auto; margin-bottom: 25px; margin-left: auto; padding-top: 60px; padding-right: 20px; padding-bottom: 60px; padding-left: 20px; width: auto; }
+.contact-info{ margin-top: 20px; }
+.contact-info li{ float: left; margin-right: 10px; text-align: center; width: 100%; }
+.container{ padding-top: 40px; }
+.cta-button{ padding-top: 1rem; padding-right: 1rem; padding-bottom: 1rem; padding-left: 1rem; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: rgb(232, 139, 12); box-shadow: rgb(96, 96, 96) 0px 0px 4px; color: rgb(255, 255, 255); display: block; font-style: italic; margin-top: auto; margin-right: auto; margin-bottom: auto; margin-left: auto; text-align: center; width: 100%; background-position: initial initial; background-repeat: initial initial; }
+header .logo{ color: rgb(232, 139, 12); font-size: 32px; line-height: 29px; margin-bottom: 0px; margin-top: 0px; text-transform: uppercase; }
+.logo small{ color: rgb(96, 96, 96); font-size: 14px; font-weight: 300; }
+.contact-info{ list-style-type: none; list-style-position: initial; list-style-image: initial; }
+.cv-profile{ font-size: 1.85rem; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(239, 239, 239); border-top-width: 1px; border-top-style: solid; border-top-color: rgb(239, 239, 239); font-weight: 300; line-height: 32px; margin-top: 40px; margin-right: 0px; margin-bottom: 40px; margin-left: 0px; padding-top: 40px; padding-right: 0px; padding-bottom: 40px; padding-left: 0px; text-align: center; }
+@media only screen and (max-width: 690px){
+.ctas .six{ width: 46%; }
+.ctas .six:first-child{ margin-right: 8%; }
+}
+@media only screen and (min-width: 460px){
+.wrap{ padding-top: 6rem; padding-right: 4rem; padding-bottom: 6rem; padding-left: 4rem; }
+.contact-info{ min-width: 20rem; }
+}
+@media only screen and (min-width: 690px){
+.header{ padding-top: 0px; padding-right: 2rem; padding-bottom: 0px; padding-left: 2rem; text-align: left; }
+.cv-profile{ padding-top: 4rem; padding-right: 4rem; padding-bottom: 4rem; padding-left: 4rem; }
+.contact-info{ margin-top: 0px; }
+.contact-info li{ text-align: left; }
+}
+@media only screen and (min-width: 1024px){
+.contact-info li{ padding-left: 3rem; }
+}
+@media print{
+body{ background-color: rgb(255, 255, 255); padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; }
+.wrap{ box-shadow: none; padding-top: 40px; padding-right: 80px; padding-bottom: 40px; padding-left: 80px; }
+}
+[class^="icon-"]::before{ font-family: barrymcgee-cv; font-style: normal; font-weight: normal; speak: none; padding-right: 1rem; display: inline-block; text-decoration: inherit; width: 1em; margin-right: 0.2em; text-align: center; font-variant: normal; text-transform: none; line-height: 1em; margin-left: 0.2em; }
+.icon-file-pdf::before{ content: ; }
+.icon-github::before{ content: ; }
+.icon-mail::before{ content: ; }
+.icon-mobile::before{ content: ; }
+.icon-mouse::before{ content: ; }

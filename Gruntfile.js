@@ -102,6 +102,25 @@ module.exports = function(grunt) {
 						}]
 					}
 		    },
+		    criticalcss: {
+          custom: {
+            options: {
+                url: "http://cv.barrymcgee.dev",
+                width: 320,
+                height: 478,
+                outputfile: "_build/css/critical.css",
+                filename: "_build/css/style.css",
+                buffer: 800*1024,
+                ignoreConsole: false
+            }
+          }
+        },
+        inline: {
+          dist: {
+            src: '_build/index.html',
+            dest: '_build/index.html'
+          }
+        },
         // Watch for new files
         watch: {
            options: {
@@ -146,8 +165,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-html-minify');
     grunt.loadNpmTasks('grunt-newer');
     grunt.loadNpmTasks('grunt-csscss');
+    grunt.loadNpmTasks('grunt-criticalcss');
+    grunt.loadNpmTasks('grunt-inline');
 
     // 8. Register all the tasks.
-    grunt.registerTask('default', ['csscss', 'concat', 'uglify', 'sass', 'newer:imagemin', 'html_minify', 'watch', 'shell', 'uncss']);
+    grunt.registerTask('default', ['csscss', 'concat', 'uglify', 'sass', 'criticalcss', 'inline', 'newer:imagemin', 'html_minify', 'watch', 'shell', 'uncss']);
 
 };
