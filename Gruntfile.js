@@ -121,6 +121,17 @@ module.exports = function(grunt) {
             dest: '_build/index.html'
           }
         },
+         scsslint: {
+           allFiles: [
+                'css/**/*.scss',
+            ],
+            options: {
+                bundleExec: false,
+                colorizeOutput: true,
+                config: '.scss-lint.yml',
+                reporterOutput: null
+            },
+        },
         // Watch for new files
         watch: {
            options: {
@@ -135,7 +146,7 @@ module.exports = function(grunt) {
             },
             css: {
               files: ['css/*.scss'],
-              tasks: ['sass', 'uglify'],
+              tasks: ['sass', 'scsslint', 'uglify'],
               options: {
                   spawn: false,
               }
@@ -165,10 +176,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-html-minify');
     grunt.loadNpmTasks('grunt-newer');
     grunt.loadNpmTasks('grunt-csscss');
+    grunt.loadNpmTasks('grunt-scss-lint');
     grunt.loadNpmTasks('grunt-criticalcss');
     grunt.loadNpmTasks('grunt-inline');
 
     // 8. Register all the tasks.
-    grunt.registerTask('default', ['csscss', 'concat', 'uglify', 'sass', 'criticalcss', 'inline', 'newer:imagemin', 'html_minify', 'watch', 'shell', 'uncss']);
+    grunt.registerTask('default', ['csscss', 'scsslint', 'concat', 'uglify', 'sass', 'criticalcss', 'inline', 'newer:imagemin', 'html_minify', 'watch', 'shell', 'uncss']);
 
 };
