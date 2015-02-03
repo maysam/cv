@@ -1,6 +1,6 @@
 // Convert pixels to rems
 
-@function parseInt($n) {
+@function parse-int($n) {
   /* 2 */
   @return $n / ($n * 0 + 1);
 }
@@ -16,11 +16,10 @@
       /* 5 */
       $px: append($px, $value);
       $rem: append($rem, $value);
-    }
-    @else {
+    } @else {
       $unit: unit($value);
       /* 6 */
-      $val: parseInt($value);
+      $val: parse-int($value);
       /* 6 */
       @if $unit == "px" {
         /* 7 */
@@ -38,9 +37,7 @@
     /* 8 */
     #{$property}: $px;
     /* 9 */
-  }
-  @else {
-
+  } @else {
     #{$property}: $px;
     /* 9 */
     #{$property}: $rem;

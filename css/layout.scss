@@ -17,13 +17,14 @@
   box-shadow: 0 0 4px $dark;
   margin: 25px auto;
   padding: 60px 20px;
-  width: 100%;
   width: auto;
 }
 
 .contact-info {
   @extend .u-cf;
+  list-style: none;
   margin-top: 20px;
+
   li {
     float: left;
     margin-right: 10px;
@@ -33,24 +34,51 @@
 }
 
 .cv-item-description {
-  text-align: left;
+  margin-bottom: 40px;
+  text-align: center;
+
   h6 {
-    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    text-transform: uppercase;
+
+    &.company-logo {
+      background: none;
+    }
   }
 }
 
-.cv-item-description .cv-item {
-  margin-bottom: 40px;
+.cv-section-title {
+  @include rem(font-size, 1.85rem);
+  border-bottom: 1px solid #efefef;
+  border-top: 1px solid #efefef;
+  color: $highlight;
+  font-weight: 300;
+  line-height: 18px;
+  margin: 0 0 40px;
+  padding: 40px 0 8px;
+  text-align: center;
 }
 
-.cv-section-title {
-  color: $highlight;
-  margin: -10px 0 40px 0;
-}
 
 .skill {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+
+  h4 {
+    line-height: 22px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: #aaa;
+    margin-bottom: 0;
+    text-align: right;
+  }
 }
+
 
 .container {
   padding-top: 40px;
@@ -66,9 +94,11 @@
   margin: auto;
   text-align: center;
   width: 100%;
+
   &:visited {
     color: $light;
   }
+
   &:active {
     box-shadow: none;
     color: $light;
@@ -93,47 +123,8 @@ header .logo {
   font-weight: 300;
 }
 
-.contact-info {
-  list-style: none;
-}
-
-.cv-profile {
-  @include rem(font-size, 1.85rem);
-  border-bottom: 1px solid #efefef;
-  border-top: 1px solid #efefef;
-  font-weight: 300;
-  line-height: 32px;
-  margin: 40px 0 40px 0;
-  padding: 40px 0;
-  text-align: center;
-}
-
-.cv-section-title {
-  border-bottom: 1px solid $highlight;
-  color: $highlight;
-  line-height: 18px;
-  margin: 0 0 40px 0;
-  padding-bottom: 8px;
-}
-
 .cv-item {
   margin-bottom: 40px;
-}
-
-.cv-item-description {
-  text-align: center;
-}
-
-.cv-item-description h6 {
-  background-color: #f5f5f5;
-  border-radius: 5px;
-  line-height: 24px;
-  margin-bottom: 10px;
-  padding: 0 10px;
-  text-transform: uppercase;
-  &.company-logo {
-    background: none;
-  }
 }
 
 .highlight {
@@ -143,20 +134,22 @@ header .logo {
 }
 
 .cv-item-details {
+
   ul {
     @include rem(padding-left, 1.6rem);
   }
-  .inline-list {
-    padding: 0;
-  }
+
   h4 {
     @include rem(font-size, 2.5rem);
     border-bottom: 1px dotted $background;
     line-height: 40px;
     margin-bottom: 24px;
   }
+
   .inline-list {
     list-style: none;
+    padding: 0;
+
     li {
       background: #b3b3b3;
       color: $light;
@@ -168,19 +161,6 @@ header .logo {
   }
 }
 
-.skill {
-  margin-bottom: 40px;
-  h4 {
-    line-height: 22px;
-    margin-bottom: 10px;
-  }
-  p {
-    color: #aaa;
-    margin-bottom: 0;
-    text-align: right;
-  }
-}
-
 .level {
   background-color: #e2e2e2;
   border-radius: 5px;
@@ -188,6 +168,7 @@ header .logo {
   margin: 5px 0;
   text-indent: -9999px;
   width: 100%;
+
   span {
     background-color: $complementary;
     border-radius: 5px 0 0 5px;
@@ -237,9 +218,12 @@ header .logo {
 }
 
 @media only screen and (max-width: $medium) {
+
   .ctas {
+
     .six {
       width: 46%;
+
       &:first-child {
         margin-right: 8%;
       }
@@ -251,24 +235,30 @@ header .logo {
   .wrap {
     @include rem(padding, 6rem 4rem);
   }
+
   .contact-info {
     @include rem(min-width, 20rem);
   }
 }
 
 @media only screen and (min-width: $medium) {
+
   .header {
     @include rem(padding, 0 2rem);
     text-align: left;
   }
+
   .cv-item-description h6 {
     @include rem(margin-left, 2rem);
   }
+
   .cv-profile {
     @include rem(padding, 4rem);
   }
+
   .contact-info {
     margin-top: 0;
+
     li {
       text-align: left;
     }
@@ -277,6 +267,7 @@ header .logo {
 
 @media only screen and (min-width: $large) {
   .contact-info {
+
     li {
       @include rem(padding-left, 3rem);
     }
@@ -288,13 +279,16 @@ header .logo {
     background-color: $light;
     padding: 0;
   }
+
   .wrap {
     box-shadow: none;
     padding: 40px 80px;
   }
+
   .level {
     margin-top: -10px;
     text-indent: 0;
+
     span {
       width: 100%;
     }
