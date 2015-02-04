@@ -169,7 +169,7 @@ module.exports = function(grunt) {
             },
             html: {
               files: ['*.html'],
-              tasks: ['html_minify'],
+              tasks: ['html_minify', 'inline'],
               options: {
                   spawn: false,
               }
